@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мой сайт</title>
+</head>
+<body>
+
+    <h1>Мой сайт</h1>
+    <button onclick="getMessage()">Получить сообщение</button>
+
+    <p id="result"></p>
+
+    <script>
+        async function getMessage() {
+            const response = await fetch("/api/hello");
+            const data = await response.json();
+
+            document.getElementById("result").textContent =
+                data.message;
+        }
+    </script>
+
+</body>
+</html>
