@@ -5,3 +5,4 @@ This is my first project on GitHub.
 ```bash
 git clone git@github.com:crimsonsunbeam/site.git
 cd site
+pip install -r requirements.txt
